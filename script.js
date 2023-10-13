@@ -9,6 +9,10 @@ function convertirCelciusAKelvin(celsius) {
 function convertirTemperatura() {
     let grados = document.getElementById('inputCelsius').value;
 
+    while(isNaN(grados)){
+        grados = prompt('Error. Ingresa un valor numérico para la temperatura en grados Celsius:');
+    }
+
     const celsius = parseFloat(grados);
     const fahrenheit = convertirCelciusAFarenheit(celsius);
     const kelvin = convertirCelciusAKelvin(celsius);
