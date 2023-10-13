@@ -6,11 +6,17 @@ function convertirCelciusAKelvin(celsius) {
     return celsius + 273.15;
 }
 
+function recargarPagina(){
+    location.reload();
+}
+
 function convertirTemperatura() {
     let grados = document.getElementById('inputCelsius').value;
 
     while(isNaN(grados)){
-        grados = prompt('Error. Ingresa un valor numérico para la temperatura en grados Celsius:');
+        alert('Error, ingresa números');
+        recargarPagina();
+        return;
     }
 
     const celsius = parseFloat(grados);
